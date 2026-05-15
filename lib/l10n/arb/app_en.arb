@@ -1,5 +1,9 @@
 {
     "@@locale": "en",
+    "appTitle": "Tonoa",
+    "@appTitle": {
+        "description": "The application title shown in the top app bar."
+    },
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
