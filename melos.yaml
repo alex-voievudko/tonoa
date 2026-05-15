@@ -1,0 +1,16 @@
+name: tonoa
+
+packages:
+  - packages/**
+
+scripts:
+  analyze:
+    run: melos exec -- "dart analyze ."
+  analyze:app:
+    run: dart analyze
+  format:
+    run: dart format .
+  test:
+    run: flutter test
+  test:packages:
+    run: melos exec --dir-exists=test -- "dart test"
