@@ -52,24 +52,46 @@ sealed class SupabaseAuthFailure implements Exception {
 class NetworkSupabaseAuthFailure extends SupabaseAuthFailure {
   NetworkSupabaseAuthFailure(Object cause, StackTrace stackTrace)
     : super('network unavailable', cause, stackTrace);
+
+  NetworkSupabaseAuthFailure.test() : this(Exception('test'), StackTrace.empty);
 }
 
 class InvalidOtpSupabaseAuthFailure extends SupabaseAuthFailure {
   InvalidOtpSupabaseAuthFailure(AuthException cause, StackTrace stackTrace)
     : super(cause.message, cause, stackTrace);
+
+  InvalidOtpSupabaseAuthFailure.test()
+    : this(
+        const AuthException('invalid', code: 'invalid_otp'),
+        StackTrace.empty,
+      );
 }
 
 class ExpiredOtpSupabaseAuthFailure extends SupabaseAuthFailure {
   ExpiredOtpSupabaseAuthFailure(AuthException cause, StackTrace stackTrace)
     : super(cause.message, cause, stackTrace);
+
+  ExpiredOtpSupabaseAuthFailure.test()
+    : this(
+        const AuthException('expired', code: 'otp_expired'),
+        StackTrace.empty,
+      );
 }
 
 class RateLimitedSupabaseAuthFailure extends SupabaseAuthFailure {
   RateLimitedSupabaseAuthFailure(AuthException cause, StackTrace stackTrace)
     : super(cause.message, cause, stackTrace);
+
+  RateLimitedSupabaseAuthFailure.test()
+    : this(
+        const AuthException('rate limited', code: 'over_email_send_rate_limit'),
+        StackTrace.empty,
+      );
 }
 
 class UnknownSupabaseAuthFailure extends SupabaseAuthFailure {
   UnknownSupabaseAuthFailure(Object cause, StackTrace stackTrace)
     : super('unexpected auth failure', cause, stackTrace);
+
+  UnknownSupabaseAuthFailure.test() : this(Exception('test'), StackTrace.empty);
 }
