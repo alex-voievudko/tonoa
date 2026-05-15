@@ -91,5 +91,22 @@ void main() {
         expect(failure, isA<RateLimitedSupabaseAuthFailure>());
       },
     );
+
+    test(
+      'fromError returns the same instance when already a SupabaseAuthFailure',
+      () {
+        final original = NetworkSupabaseAuthFailure(
+          Exception('preserved'),
+          StackTrace.empty,
+        );
+
+        final wrapped = SupabaseAuthFailure.fromError(
+          original,
+          StackTrace.empty,
+        );
+
+        expect(wrapped, same(original));
+      },
+    );
   });
 }
