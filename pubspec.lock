@@ -255,6 +255,29 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  form_inputs:
+    dependency: "direct main"
+    description:
+      path: "packages/form_inputs"
+      relative: true
+    source: path
+    version: "0.1.0"
+  formz:
+    dependency: transitive
+    description:
+      name: formz
+      sha256: "382c7be452ff76833f9efa0b2333fec3a576393f6d2c7801725bed502f3d40c3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.8.0"
+  freezed_annotation:
+    dependency: transitive
+    description:
+      name: freezed_annotation
+      sha256: "7294967ff0a6d98638e7acb774aac3af2550777accd8149c90af5b014e6d44d8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -303,6 +326,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.2"
+  instagram_coach_models:
+    dependency: "direct main"
+    description:
+      path: "packages/instagram_coach_models"
+      relative: true
+    source: path
+    version: "0.1.0"
   intl:
     dependency: "direct main"
     description:
