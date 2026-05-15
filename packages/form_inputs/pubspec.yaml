@@ -1,0 +1,14 @@
+name: form_inputs
+description: Reusable Formz inputs for the Tonoa app.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  formz: ^0.8.0
+
+dev_dependencies:
+  test: ^1.25.15
+  very_good_analysis: ^10.2.0
