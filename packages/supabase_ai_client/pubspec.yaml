@@ -10,8 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  instagram_coach_models:
-    path: ../instagram_coach_models
   supabase_flutter: ^2.10.0
 
 dev_dependencies:
