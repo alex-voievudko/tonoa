@@ -20,7 +20,7 @@ dependencies:
     path: packages/form_inputs
   instagram_coach_models:
     path: packages/instagram_coach_models
-  intl: ^0.20.2
+  intl: ^0.20.3
 
 dev_dependencies:
   bloc_lint: ^0.4.1
